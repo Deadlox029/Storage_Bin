@@ -55,21 +55,21 @@ void longest(struct head_t *S){
     // How long is the longest text
     struct text_t *search = S->link;
 
-    int longest = strlen(search->text);
-    int shortest = strlen(search->text);
+    int longest = strlen(search->text)-1;
+    int shortest = strlen(search->text)-1;
 
     while(search->link != NULL)
     {
         search = search->link;
 
-        if(longest < strlen(search->text))
+        if(longest < strlen(search->text)-1)
         {
-            longest = strlen(search->text);
+            longest = strlen(search->text)-1;
         }
 
-        if(shortest > strlen(search->text))
+        if(shortest > strlen(search->text)-1)
         {
-            shortest = strlen(search->text);
+            shortest = strlen(search->text)-1;
         }
     }
 
