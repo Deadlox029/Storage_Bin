@@ -7,7 +7,7 @@ int lastline_dup(struct head_t *S) {
     while (mov->link != NULL) {
         mov = mov->link;
     }
-    char origin[] = mov->text;
+    char *origin = mov->text;
     mov = S->link;
     for (int i = 0; i < S->lines-1; i++) {
         if (strcmp(origin, mov->text) == 0) {
