@@ -79,6 +79,10 @@ void longest(struct head_t *S){
 
 int main(int argc, char *argv[]) {
     FILE *fp = fopen(argv[1],"r");
+    if (*fp==NULL) {
+        printf("Can't open file\n");
+        return 1;
+    }
     struct head_t *storage = malloc(sizeof(struct head_t));
     storage->lines = 0;
     storage->link = NULL;
